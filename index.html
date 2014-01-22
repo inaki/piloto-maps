@@ -7,8 +7,6 @@
 </head>
 <style>
 	#map { height: 600px; }
-	td { width:150px; }
-	th { width:150px; }
 </style>
 <body>
 
@@ -20,27 +18,14 @@
 <script type="text/javascript">
 	
 	// create a map in the "map" div, set the view to a given place and zoom
-var map = L.map('map').setView([18.465487,-66.11686], 15);
+var map = L.map('map').setView([18.46551, -66.11685], 17);
 
-var marker = L.marker([18.44, -66.07]).addTo(map);
+var marker = L.marker([18.46551, -66.11685]).addTo(map);
 
-var circle = L.circle([18.44, -66.07], 500, {
-	color: 'red',
-	fillColor: '#f03',
-	fillOpacity: 0.5
-	}).addTo(map);
-
-var polygon = L.polygon([
-		[18.44, -66.07], 
-		[18.445, -66.05],
-		[18.43475, -66.05616]
-	]).addTo(map);
-	
 var popup = L.popup();
 
 marker.bindPopup('Hola hackers,<br> Estamos en Piloto151').openPopup();
-circle.bindPopup('Hola soy un círculo, dude!');
-polygon.bindPopup('Hola yo soy un polígono');
+
 
 
 function onMapClick(e){
