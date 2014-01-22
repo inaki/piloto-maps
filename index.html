@@ -4,16 +4,64 @@
 	<meta charset="UTF-8">
 	<title>AMA maps</title>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 <style>
-	#map { height: 600px; }
+	#map { 
+		height: 600px; 
+		}
+	.header {
+		margin-bottom: 50px;
+	}
+	i.fa {
+		color: #666;
+	}
 </style>
 <body>
+	
+	<div class="container">
+	
+		<div class="header">
+	        <ul class="nav nav-pills pull-right">
+	          <li class="active"><a href="#">About</a></li>
+	          <li><a href="#">Contact</a></li>
+	        </ul>
+	        <h3 class="text-muted">Piloto 151 Maps</h3>
+	    </div>
+		
+		<div class="row col-lg-12">
+			<div class="col-md-9">
+				<div id="map"></div>
+			</div>
+			<div class="col-md-3">
+				<form>
+					<div class="checkbox">
+					    <label>
+					      <input type="checkbox"><i class="fa fa-beer"></i> wanna beer?
+					    </label>
+				  	</div>
+				  	<div class="checkbox">
+					    <label>
+					      <input type="checkbox"><i class="fa fa-coffee"></i> wanna cafe?
+					    </label>
+				  	</div>
+				  	<div class="checkbox">
+					    <label>
+					      <input type="checkbox"><i class="fa fa-cutlery"></i> wanna eat?
+					    </label>
+				  	</div>
+				</form>
+				
+			</div>
+		</div>
 
-	<div id="map"></div>
+
+	</div>
+	
 	
 
-
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
 <script type="text/javascript">
 	
@@ -24,7 +72,7 @@ var marker = L.marker([18.46551, -66.11685]).addTo(map);
 
 var popup = L.popup();
 
-marker.bindPopup('Hola hackers,<br> Estamos en Piloto151').openPopup();
+marker.bindPopup('Piloto 151').openPopup();
 
 
 
