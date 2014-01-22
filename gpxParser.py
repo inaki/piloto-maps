@@ -15,8 +15,8 @@ f = open("parsed-Lupulo.js", "w")
 f.write("points = [")
 for i in range(len(array_of_points)):
 	item = array_of_points[i]
-	f.write("(%s," % item[0])
+	f.write("[%s," % item[0])
 	if i == len(array_of_points) - 1:
-		f.write(" %s)]" % item[1])
+		f.write(" %s]]" % item[1])
 	else:
-		f.write(" %s), " % item[1])
+		f.write(" %s], " % item[1])
